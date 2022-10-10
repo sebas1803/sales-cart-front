@@ -1,0 +1,61 @@
+<div>
+    <h1>Client</h1>
+    <div class="input-component">
+        <div class="input-title">
+            <h2>Name: </h2>
+            <input type="text" value={{data.client.firstname}} readonly>
+        </div>
+        <div class="input-title">
+            <h2>Lastname: </h2>
+            <input type="text" value={{data.client.lastname}} readonly>
+        </div>
+        <div class="input-title">
+            <h2>DNI: </h2>
+            <input type="text" value={{data.client.dni}} readonly>
+        </div>
+    </div>
+    <div class="input-component">
+        <div class="input-title">
+            <h2>Phone: </h2>
+            <input type="text" value={{data.client.phone}} readonly>
+        </div>
+        <div class="input-title">
+            <h2>Email: </h2>
+            <input type="text" value={{data.client.email}} readonly>
+        </div>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef class="title-space"> Product </th>
+            <td mat-cell *matCellDef="let element" class="content-space"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="unitPrice">
+            <th mat-header-cell *matHeaderCellDef class="title-space"> Unit price </th>
+            <td mat-cell *matCellDef="let element" class="content-space"> {{element.price}} </td>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef class="title-space"> Quantity </th>
+            <td mat-cell *matCellDef="let element" class="content-space"> {{element.quantity}} </td>
+        </ng-container>
+        <ng-container matColumnDef="subtotal">
+            <th mat-header-cell *matHeaderCellDef class="title-space"> Subtotal </th>
+            <td mat-cell *matCellDef="let element" class="content-space"> {{element.subtotal}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div class="input-component">
+        <div class="input-title">
+            <h2>Fecha: </h2>
+            <input type="text" value={{data.sale.date}} readonly>
+        </div>
+        <div class="input-title">
+            <h2>Total: </h2>
+            <input type="text" readonly>
+        </div>
+    </div>
+    <div class="button">
+        <button mat-raised-button color="primary" aria-label="edit-button" (click)="closeModal()">Close</button>
+    </div>
+</div>

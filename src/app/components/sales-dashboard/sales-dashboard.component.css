@@ -1,0 +1,17 @@
+.sales {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    padding-top: 200px;
+    margin-right: 150px;
+    align-items: baseline;
+}
+
+.content-space {
+    padding: 15px;
+}
+
+.title-space {
+    padding-left: 15px;
+}

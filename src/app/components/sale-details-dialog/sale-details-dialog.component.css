@@ -1,0 +1,38 @@
+.input-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    height: 25px;
+    align-items: baseline;
+}
+
+.input-component {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+input {
+    margin-left: 5px;
+    width: 140px;
+}
+
+table {
+    margin: 20px 10px;
+    width: 500px;
+}
+
+.row-fields {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
